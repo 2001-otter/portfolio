@@ -1,0 +1,10 @@
+.Content {
+  height: 1000px;
+  /* background-image: url('../../assets/img/background-img.jpg'); */
+}
+
+.Content h2 {
+  margin-top: 60px;
+  font-size: 36px;
+  font-weight: lighter;
+}
