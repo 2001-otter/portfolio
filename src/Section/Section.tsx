@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from "react";
 
-import About from './About/About';
-import Intro from './Intro/Intro';
-import Passion from './Passion/Passion';
-import Experience from './Experience/Experience';
-import Work from './Work/Work';
-import Contact from './Contact/Contact';
+import About from "./About/About";
+import Intro from "./Intro/Intro";
+import Passion from "./Passion/Passion";
+import Experience from "./Experience/Experience";
+import Work from "./Work/Work";
+import Contact from "./Contact/Contact";
 
 const Section = (props: any) => {
-  return(
+  return (
     <React.Fragment>
       <Intro></Intro>
       <About></About>

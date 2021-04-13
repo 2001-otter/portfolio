@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Work.module.css';
+import styles from "./Work.module.css";
 
 const Work = (props: any) => {
-  return(
-    <section className={styles.Content}>
+  return (
+    <section className={styles.Content} id="work">
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Work}>
         <h2>Hi, I'm Nicolas</h2>

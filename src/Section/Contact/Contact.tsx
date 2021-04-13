@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Contact.module.css';
+import styles from "./Contact.module.css";
 
 const Contact = (props: any) => {
-  return(
-    <section className={styles.Content}>
+  return (
+    <section className={styles.Content} id="contact">
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Contact}>
         <h2>Hi, I'm Nicolas</h2>

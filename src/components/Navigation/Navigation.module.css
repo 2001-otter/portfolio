@@ -1,10 +1,29 @@
-.Navigation {
-  height: 56px;
+.Top {
+  transition-timing-function: ease-in;
+  transition: 0.8s;
+  height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  z-index: 90;
+}
+
+.Scrolled {
+  transition-timing-function: ease-in;
+  transition: 0.8s;
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(27, 26, 26);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,8 +41,14 @@
   color: white;
 }
 
+.DesktopOnly {
+  /* display: none; */
+  height: 100%;
+}
+
 @media (max-width: 499px) {
   .DesktopOnly {
-      display: none;
+    display: none;
+    height: 100%;
   }
 }
