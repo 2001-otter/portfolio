@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import image from '../../../assets/img/usj.jpg';
-import styles from './Logo.module.css';
+import styles from "./Logo.module.css";
 
 const Logo = (props: any) => {
-  return(
+  return (
     <div className={styles.Img}>
-      <img alt="profile" src={image}></img>
+      {props.children}
+      {/* <img alt="profile" src={props.logo}></img> */}
     </div>
   );
 };

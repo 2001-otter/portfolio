@@ -44,7 +44,8 @@ const Navigation = (props: any) => {
   return (
     <header className={isScrolled ? styles.Scrolled : styles.Top}>
       <div className={styles.Name}>
-        <span>{section}</span>
+        <span>Nicolas Othmar</span>
+        {/* <span>{section}</span> */}
       </div>
       <nav className={styles.DesktopOnly}>
         <NavigationItems section={section} />

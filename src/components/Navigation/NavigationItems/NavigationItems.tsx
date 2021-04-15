@@ -9,8 +9,8 @@ const navigationItems = (props: any) => (
       About
     </NavigationItem>
     <NavigationItem link="passion">Passion</NavigationItem>
-    <NavigationItem link="experience">Experience</NavigationItem>
-    <NavigationItem link="work">Work</NavigationItem>
+    {/* <NavigationItem link="experience">Experience</NavigationItem> */}
+    <NavigationItem link="projects">Projects</NavigationItem>
     <NavigationItem link="contact">Contact</NavigationItem>
   </ul>
 );

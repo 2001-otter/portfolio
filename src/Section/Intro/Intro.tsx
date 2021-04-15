@@ -8,7 +8,7 @@ const Intro = (props: any) => {
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Intro}>
         <h3>Hi, I'm Nicolas</h3>
-        <span>Front-end software engineer</span>
+        <span>I'm a front-end software engineer</span>
       </div>
     </section>
   );
