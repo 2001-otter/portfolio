@@ -22,8 +22,8 @@ const Passion = (props: any) => {
               With a passion and strong foundation in programming, I'm eager to
               contribute to the world through my code. That's why I'm trying to
               improve everyday by not just writing a code that works, but also a
-              clean and undesrstandable code, that does well what is intended to
-              do and can be reused by others.
+              clean and undesrstandable code, that does well what it is intended
+              to do and can be reused by others.
             </p>
           </div>
           <div className={styles.Item}>
