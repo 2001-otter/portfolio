@@ -2,45 +2,54 @@ import React from "react";
 
 import styles from "./Work.module.css";
 
+import Project from "./Project/Project";
+
+import burgerOrder from "../../assets/img/projects-screenshot/burger-order.png";
+
 const Passion = (props: any) => {
+  const projects = [
+    {
+      title: "Burger Order",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tenetur autem placeat eum quia, soluta rerum tempore animi, minima facilis laborum tempora laboriosam doloremque rem. Cupiditate odio natus voluptates dolore!",
+      pict: burgerOrder,
+    },
+    {
+      title: "Burger Order",
+      desc:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint sunt animi aliquam cumque dolore magnam quo inventore nostrum id quasi?",
+      pict: burgerOrder,
+    },
+    {
+      title: "Burger Order",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eligendi.",
+      pict: burgerOrder,
+    },
+    {
+      title: "Burger Order",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eligendi.",
+      pict: burgerOrder,
+    },
+  ];
+
+  const projectsComponent = projects.map((project) => {
+    return (
+      <Project
+        title={project.title}
+        desc={project.desc}
+        pict={project.pict}
+      ></Project>
+    );
+  });
+
   return (
-    <section className={styles.Content} id="passion">
+    <section className={styles.Content} id="projects">
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Passion}>
-        <h2>What I passionate about</h2>
-        <div className={styles.Items}>
-          <div className={styles.Item}>
-            <h3>Development</h3>
-            <p>
-              With a passion and strong foundation in programming, I'm eager to
-              contribute to the world through my code. That's why I'm trying to
-              improve everyday by not just writing a code that works, but also a
-              clean and undesrstandable code, that does well what is intended to
-              do and can be reused by others.
-            </p>
-          </div>
-          <div className={styles.Item}>
-            <h3>Improve</h3>
-            <p>
-              "To be more and to do more"—a motto that I always adhere to. Life
-              is a lifelong journey of improvement. I aspire to improve not only
-              my technical skill, but also my soft skill as a programmer. I
-              believe that to lead a meaningful life, it's essential to improve
-              on every important aspect of life.
-            </p>
-          </div>
-          <div className={styles.Item}>
-            <h3>Colaborate</h3>
-            <p>
-              Contrary to the popular image of a programmer: sitting alone in
-              front of their computer in a dark room, I find that working in a
-              team is a crucial part of developing a great project.
-              Interchanging ideas, discussing the best solution to a problem,
-              strengthening each other weaknesses; there are many advantages of
-              working together in a team.
-            </p>
-          </div>
-        </div>
+        <h2>My projects</h2>
+        <div className={styles.Items}>{projectsComponent}</div>
       </div>
     </section>
   );
