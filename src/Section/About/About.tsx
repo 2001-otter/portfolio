@@ -17,7 +17,7 @@ import mysqlLogo from "../../assets/img/mysql-logo.png";
 const About = (props: any) => {
   return (
     <section className={styles.Content} id="about">
-      <div>
+      <div className={styles.Left}>
         <div className={styles.About}>
           <h2>About me</h2>
           <img alt="profile" src={image}></img>
@@ -37,6 +37,8 @@ const About = (props: any) => {
             Current location: Berlin, Germany
           </p>
         </div>
+      </div>
+      <div className={styles.Right}>
         <div className={styles.Tools}>
           <h2>Technologies I've been working with</h2>
           <div className={styles.Logo}>
@@ -72,6 +74,9 @@ const About = (props: any) => {
               <img src={javaLogo} alt="javaLogo"></img>
             </div>
           </div>
+        </div>
+        <div className={styles.Preferred}>
+          <h2>What I'm looking for</h2>
         </div>
       </div>
     </section>
