@@ -1,0 +1,17 @@
+.Img {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.Img img {
+  margin: 20px auto;
+  width: 170px;
+  border-radius: 50%;
+}
+
+.Img i {
+  /* width: 10rem; */
+}

@@ -1,0 +1,29 @@
+.Main {
+  background-color: white;
+  display: flow-root;
+  margin: 0 2rem;
+  height: 90vh;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+.Main > p {
+  margin: 2rem 1rem;
+  /* padding: 0 10rem; */
+}
+
+.ImgContainer {
+  /* display: flex; */
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.Img {
+  /* align-items: center;
+  justify-content: center; */
+  margin: 2rem 0;
+  margin: auto;
+  width: 80%;
+}

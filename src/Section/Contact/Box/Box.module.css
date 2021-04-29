@@ -1,0 +1,28 @@
+.Box {
+  margin: 0 1rem;
+  /* background-color: white; */
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.Box img {
+  width: 2.8rem;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+} */
+
+.Box i {
+  color: white;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.Box i:hover {
+  color: #0893ca;
+  top: -10px;
+}
