@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Layout.module.css';
-import Navigation from '../../components/Navigation/Navigation';
+import styles from "./Layout.module.css";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Layout = (props: any) => {
-  return(
+  return (
     <React.Fragment>
       <Navigation></Navigation>
-      <main className={styles.Content}>
-        {props.children}
-      </main>
+      <main className={styles.Content}>{props.children}</main>
+      {/* <p></p> */}
+      <footer>Designed and build by Nicolas</footer>
     </React.Fragment>
   );
 };

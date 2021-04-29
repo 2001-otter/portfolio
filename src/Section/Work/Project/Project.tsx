@@ -8,6 +8,7 @@ const Project = (props: any) => {
       <h3>{props.title}</h3>
       <img src={props.pict} alt="screenshot"></img>
       <p>{props.desc}</p>
+      <p className={styles.Tech}>{props.tech}</p>
     </div>
   );
 };

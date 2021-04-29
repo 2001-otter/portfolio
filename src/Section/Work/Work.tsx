@@ -8,6 +8,10 @@ import ProjectView from "./ProjectView/ProjectView";
 import Slider from "./Slider/Slider";
 
 import burgerOrder from "../../assets/img/projects-screenshot/burger-order.png";
+import dnd from "../../assets/img/projects-screenshot/dnd.png";
+
+import reactProfile from "../../assets/img/projects-screenshot/react_profile.png";
+import netflixClone from "../../assets/img/projects-screenshot/netflix_clone.png";
 
 // interface Project {
 //   title: string;
@@ -20,29 +24,41 @@ const Passion = (props: any) => {
     {
       title: "Burger Order",
       desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tenetur autem placeat eum quia, soluta rerum tempore animi, minima facilis laborum tempora laboriosam doloremque rem. Cupiditate odio natus voluptates dolore!",
+        "Create and order your own burger! A project I made to learn the basic and some of the advance part of React: redux, authentication, axios, and router",
+      longerDesc:
+        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
       pict: burgerOrder,
+      tech: "React · CSS",
       id: 1,
     },
     {
-      title: "Burger Order",
-      desc:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint sunt animi aliquam cumque dolore magnam quo inventore nostrum id quasi?",
-      pict: burgerOrder,
+      title: "React Profile",
+      desc: "My website portfolio",
+      longerDesc:
+        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+
+      pict: reactProfile,
+      tech: "React · CSS · Bootstrap",
       id: 2,
     },
     {
-      title: "Burger Order",
+      title: "Drag and Drop",
       desc:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus vitae rem eius eos accusamus, in recusandae magnam ex soluta earum ratione nihil cumque ipsa distinctio quis asperiores quo? Sed quas suscipit facere commodi, reprehenderit saepe, eligendi praesentium maxime rem vitae molestiae aspernatur aut esse pariatur earum, consequuntur in vero autem similique qui fugit? Neque maiores nostrum non optio natus cupiditate?",
-      pict: burgerOrder,
+        "A project manager with drag-and-drop implementation that I made to learn typescript.",
+      longerDesc:
+        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+
+      pict: dnd,
+      tech: "Typescript · CSS",
       id: 3,
     },
     {
-      title: "Burger Order",
-      desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eligendi.",
-      pict: burgerOrder,
+      title: "Netflix Clone",
+      desc: "A clone of Netflix",
+      longerDesc:
+        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+      pict: netflixClone,
+      tech: "PHP · HTML · JS · CSS · MySQL",
       id: 4,
     },
   ];
@@ -68,7 +84,7 @@ const Passion = (props: any) => {
         // @ts-ignore: Object is possibly 'null'.
         title={viewedProject.title}
         // @ts-ignore: Object is possibly 'null'.
-        desc={viewedProject.desc}
+        desc={viewedProject.longerDesc}
         // @ts-ignore: Object is possibly 'null'.
         pict={viewedProject.pict}
       ></ProjectView>
@@ -83,19 +99,20 @@ const Passion = (props: any) => {
         title={project.title}
         desc={project.desc}
         pict={project.pict}
+        tech={project.tech}
       ></Project>
     );
   });
 
-  const projectsView = projects.map((project) => {
-    return (
-      <ProjectView
-        title={project.title}
-        desc={project.desc}
-        pict={project.pict}
-      ></ProjectView>
-    );
-  });
+  // const projectsView = projects.map((project) => {
+  //   return (
+  //     <ProjectView
+  //       title={project.title}
+  //       desc={project.desc}
+  //       pict={project.pict}
+  //     ></ProjectView>
+  //   );
+  // });
 
   return (
     <section className={styles.Content} id="projects">

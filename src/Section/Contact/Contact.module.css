@@ -1,10 +1,12 @@
 .Content {
-  background-color: #252934;
-  padding: 4rem;
+  background-color: #272b36;
+  /* padding-bottom: 2.5rem; */
+  scroll-padding: -2rem;
   color: white;
 }
 
 .Content h1 {
+  margin-top: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -12,12 +14,38 @@
   max-width: 35rem;
   justify-content: center;
   margin: auto;
+  margin-bottom: 4rem;
   /* display: inline-block; */
+  padding: 0 1rem;
 }
 
-button {
-  text-align: left;
-  justify-content: left;
-  align-items: left;
-  color: red;
+.Form button {
+  float: right;
+}
+
+.Content i {
+  position: relative;
+  color: #e31b6d;
+  top: 1.4rem;
+}
+
+.Content i:hover {
+  color: #d64280;
+}
+
+.Socmed {
+  background-color: var(--clr-primary);
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 699px) {
+  .Content {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
 }
