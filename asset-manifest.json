@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.dc1e475e.chunk.css",
-    "main.js": "/portfolio/static/js/main.c77d2f7b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c77d2f7b.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.ff05672c.chunk.css",
+    "main.js": "/portfolio/static/js/main.f8545f2b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f8545f2b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.ac688077.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.ac688077.js.map",
     "static/js/2.ff52327f.chunk.js": "/portfolio/static/js/2.ff52327f.chunk.js",
@@ -10,15 +10,15 @@
     "static/js/3.b4ecfac9.chunk.js": "/portfolio/static/js/3.b4ecfac9.chunk.js",
     "static/js/3.b4ecfac9.chunk.js.map": "/portfolio/static/js/3.b4ecfac9.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.dc1e475e.chunk.css.map": "/portfolio/static/css/main.dc1e475e.chunk.css.map",
+    "static/css/main.ff05672c.chunk.css.map": "/portfolio/static/css/main.ff05672c.chunk.css.map",
     "static/js/2.ff52327f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ff52327f.chunk.js.LICENSE.txt",
     "static/media/Intro.module.css": "/portfolio/static/media/background-img.37964f77.jpg",
     "static/media/burger-order.c9f63269.png": "/portfolio/static/media/burger-order.c9f63269.png",
     "static/media/cplusplus-logo.0a81196c.png": "/portfolio/static/media/cplusplus-logo.0a81196c.png",
     "static/media/css-logo.4e67641b.png": "/portfolio/static/media/css-logo.4e67641b.png",
     "static/media/dnd.949e1ea0.png": "/portfolio/static/media/dnd.949e1ea0.png",
-    "static/media/java-logo.22f9f02f.svg": "/portfolio/static/media/java-logo.22f9f02f.svg",
-    "static/media/javascript-logo.5234e445.svg": "/portfolio/static/media/javascript-logo.5234e445.svg",
+    "static/media/java-logo.5dd2ab04.svg": "/portfolio/static/media/java-logo.5dd2ab04.svg",
+    "static/media/javascript-logo.1a74c56d.svg": "/portfolio/static/media/javascript-logo.1a74c56d.svg",
     "static/media/mysql-logo.363ca829.png": "/portfolio/static/media/mysql-logo.363ca829.png",
     "static/media/netflix_clone.0a0dcbdd.png": "/portfolio/static/media/netflix_clone.0a0dcbdd.png",
     "static/media/nextjs-logo.1b2b52c0.svg": "/portfolio/static/media/nextjs-logo.1b2b52c0.svg",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.ac688077.js",
     "static/js/2.ff52327f.chunk.js",
-    "static/css/main.dc1e475e.chunk.css",
-    "static/js/main.c77d2f7b.chunk.js"
+    "static/css/main.ff05672c.chunk.css",
+    "static/js/main.f8545f2b.chunk.js"
   ]
 }
