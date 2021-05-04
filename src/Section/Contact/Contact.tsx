@@ -54,7 +54,7 @@ const Contact = (props: any) => {
   ];
 
   const socmedBoxs = socmeds.map((socmed) => {
-    return <Box img={socmed.logo} name={socmed.name}></Box>;
+    return <Box key={socmed.name} img={socmed.logo} name={socmed.name}></Box>;
   });
 
   var image = (
@@ -101,12 +101,14 @@ const Contact = (props: any) => {
           {/* <button>tes</button> */}
           <Button variant="light">Submit</Button>
         </div>
-        <a href={"#about"}>
-          <i
-            className="fas fa-arrow-circle-up fa-3x"
-            // onClick={faClickHandle()}
-          ></i>
-        </a>
+        <div className={styles.Arrow}>
+          <a href={"#about"}>
+            <i
+              className="fas fa-arrow-circle-up fa-3x"
+              // onClick={faClickHandle()}
+            ></i>
+          </a>
+        </div>
         <div className={styles.Socmed}>{socmedBoxs}</div>
       </section>
     </>

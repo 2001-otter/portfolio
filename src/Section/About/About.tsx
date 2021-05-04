@@ -22,7 +22,12 @@ const About = (props: any) => {
         <div className={styles.Left}>
           <div className={styles.About}>
             <h2>About me</h2>
-            <img alt="profile" src={image}></img>
+            <hr className={styles.One}></hr>
+            <hr className={styles.Two}></hr>
+            <hr className={styles.Three}></hr>
+            <div className={styles.Img}>
+              <img alt="profile" src={image}></img>
+            </div>
             <p>
               I'm a web developer with a passion for front end development. I'm
               also a student that is trying to find my contribution to society

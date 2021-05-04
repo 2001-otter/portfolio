@@ -23,13 +23,13 @@
   float: right;
 }
 
-.Content i {
+.Arrow i {
   position: relative;
   color: #e31b6d;
   top: 1.4rem;
 }
 
-.Content i:hover {
+.Arrow i:hover {
   color: #d64280;
 }
 

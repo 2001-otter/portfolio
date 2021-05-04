@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 
 import styles from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
@@ -10,6 +10,14 @@ const Modal = (props: any) => {
   //     nextProps.children !== this.props.children
   //   );
   // }
+
+  useEffect(() => {
+    console.log("tes");
+    if (props.show) {
+      document.body.style.overflowY = "hidden";
+    } else document.body.style.overflowY = "scroll";
+    return () => {};
+  }, [props.show]);
 
   return (
     <div className={styles.Container}>

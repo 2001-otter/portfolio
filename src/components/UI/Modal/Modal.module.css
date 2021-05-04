@@ -1,32 +1,32 @@
 .Container {
   display: flex;
-  /* overflow: auto; */
 }
 .Modal {
+  display: flex; /* relevant part */
+  flex-direction: column; /* relevant part */
+  overflow: hidden; /* relevant part */
+
   position: fixed;
   z-index: 500;
-  /* background-color: white; */
-  width: 70%;
+  width: 90%;
+  height: 90vh;
 
-  --height: 30rem;
-  /* height: var(--height); */
-  height: 30rem;
+  --height: 40rem;
+  min-height: var(--height);
   top: calc(50% - var(--height) / 2);
 
-  /* border: 1px solid #ccc; */
-  /* box-shadow: 1px 1px 1px black; */
-  padding: 16px;
-  left: 15%;
+  left: 5%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .Modal {
+    overflow-y: hidden;
     width: 70%;
-    --height: 36rem;
-    height: var(--height);
-    top: calc(43% - var(--height) / 2);
+    /* --height: 42rem;
+    min-height: var(--height); */
+    top: calc(50% - var(--height) / 2);
     left: calc(50% - 35%);
   }
 }

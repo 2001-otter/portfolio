@@ -1,29 +1,79 @@
 .Main {
+  height: 100%;
+  overflow-y: auto;
   background-color: white;
-  display: flow-root;
-  margin: 0 2rem;
-  height: 90vh;
+  /* display: flow-root; */
+  /* min-height: inherit; */
+}
+
+.Header {
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.Header i {
+  font-size: 25px;
+  /* font-weight: lighterö; */
+  float: right;
+  position: relative;
+  top: 20px;
+  right: 10px;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+  -webkit-filter: invert(75%);
+  -moz-filter: invert(75%);
+  -ms-filter: invert(75%);
+  filter: invert(75%);
+  filter: gray; /* IE 6-9 */
+  /* width: 6rem; */
+}
+
+.Header i:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  filter: none;
 }
 
 h3 {
-  margin-top: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
-.Main > p {
-  margin: 2rem 1rem;
-  /* padding: 0 10rem; */
+.Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.Top {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.Bottom {
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .ImgContainer {
-  /* display: flex; */
   text-align: center;
-  padding: 2rem 0;
 }
 
 .Img {
-  /* align-items: center;
-  justify-content: center; */
-  margin: 2rem 0;
-  margin: auto;
-  width: 80%;
+  width: 90%;
+  border: 3px solid #555;
+  background-color: #555;
+}
+
+@media (min-width: 1000px) {
+  .Content {
+    flex-direction: column;
+  }
+
+  .Bottom p {
+    padding: 0 5rem;
+  }
 }

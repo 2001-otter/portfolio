@@ -27,7 +27,7 @@ const Passion = (props: any) => {
         "Create and order your own burger! A project I made to learn the basic and some of the advance part of React: redux, authentication, axios, and router",
       longerDesc:
         "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
-      pict: burgerOrder,
+      pict: [burgerOrder, reactProfile, dnd],
       tech: "React · CSS",
       id: 1,
     },
@@ -37,7 +37,7 @@ const Passion = (props: any) => {
       longerDesc:
         "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
 
-      pict: reactProfile,
+      pict: [reactProfile],
       tech: "React · CSS · Bootstrap",
       id: 2,
     },
@@ -48,7 +48,7 @@ const Passion = (props: any) => {
       longerDesc:
         "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
 
-      pict: dnd,
+      pict: [dnd],
       tech: "Typescript · CSS",
       id: 3,
     },
@@ -57,7 +57,7 @@ const Passion = (props: any) => {
       desc: "A clone of Netflix",
       longerDesc:
         "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
-      pict: netflixClone,
+      pict: [netflixClone],
       tech: "PHP · HTML · JS · CSS · MySQL",
       id: 4,
     },
@@ -98,7 +98,7 @@ const Passion = (props: any) => {
         onClick={() => clickHandler(project)}
         title={project.title}
         desc={project.desc}
-        pict={project.pict}
+        pict={project.pict[0]}
         tech={project.tech}
       ></Project>
     );
