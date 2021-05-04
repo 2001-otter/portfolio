@@ -82,6 +82,34 @@ ul {
   background-color: #555;
 }
 
+.Link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.Link button {
+  width: 7rem;
+  height: 3rem;
+  color: white;
+  background-color: #232630;
+  transition: 0.6s;
+}
+
+.Link button:hover {
+  cursor: pointer;
+  color: #232630;
+  background-color: white;
+}
+
+.Link p {
+  padding: 0 2rem;
+  margin-bottom: 0;
+}
+
 @media (min-width: 1000px) {
   .Content {
     flex-direction: column;
@@ -89,31 +117,5 @@ ul {
 
   .Bottom p {
     padding: 0 5rem;
-  }
-
-  .Link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
-  .Link button {
-    width: 7rem;
-    height: 3rem;
-    color: white;
-    background-color: #232630;
-    transition: 0.6s;
-  }
-
-  .Link button:hover {
-    cursor: pointer;
-    color: #232630;
-    background-color: white;
-  }
-
-  .Link p {
-    padding: 0 2rem;
-    margin-bottom: 0;
   }
 }
