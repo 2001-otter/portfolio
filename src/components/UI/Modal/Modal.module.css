@@ -9,7 +9,7 @@
   position: fixed;
   z-index: 500;
   width: 90%;
-  height: 90vh;
+  /* height: 90vh; */
 
   --height: 40rem;
   min-height: var(--height);
@@ -22,11 +22,11 @@
 
 @media (min-width: 1000px) {
   .Modal {
-    overflow-y: hidden;
-    width: 70%;
+    /* overflow-y: hidden; */
+    width: 60%;
     /* --height: 42rem;
     min-height: var(--height); */
-    top: calc(50% - var(--height) / 2);
-    left: calc(50% - 35%);
+    top: calc(49% - var(--height) / 2);
+    left: calc(50% - 30%);
   }
 }

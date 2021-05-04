@@ -11,6 +11,10 @@
   background-color: #f0f0f0;
 }
 
+.Header h3 {
+  margin-left: 1rem;
+}
+
 .Header i {
   font-size: 25px;
   /* font-weight: lighterö; */
@@ -58,6 +62,16 @@ h3 {
   width: 100%;
 }
 
+.Bottom h4 {
+  margin-top: 2rem;
+}
+
+.Bottom h4,
+ul {
+  margin-left: 4rem;
+  text-align: left;
+}
+
 .ImgContainer {
   text-align: center;
 }
@@ -75,5 +89,31 @@ h3 {
 
   .Bottom p {
     padding: 0 5rem;
+  }
+
+  .Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .Link button {
+    width: 7rem;
+    height: 3rem;
+    color: white;
+    background-color: #232630;
+    transition: 0.6s;
+  }
+
+  .Link button:hover {
+    cursor: pointer;
+    color: #232630;
+    background-color: white;
+  }
+
+  .Link p {
+    padding: 0 2rem;
+    margin-bottom: 0;
   }
 }

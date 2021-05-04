@@ -28,6 +28,25 @@ const ProjectView = (props: any) => {
       alt="screenshot"
     ></img>
   ));
+
+  const link = props.site ? (
+    <div className={styles.Link}>
+      <a href={props.site} target="_blank" rel="noopener noreferrer">
+        <button>Visit Site</button>
+      </a>
+      <p>or</p>
+      <a href={props.code} target="_blank" rel="noopener noreferrer">
+        <button>View Code</button>
+      </a>
+    </div>
+  ) : (
+    <div className={styles.Link}>
+      <a href={props.code} target="_blank" rel="noopener noreferrer">
+        <button>View Code</button>
+      </a>
+    </div>
+  );
+
   return (
     <div className={styles.Main}>
       <div className={styles.Header}>
@@ -42,11 +61,7 @@ const ProjectView = (props: any) => {
         </div>
         <div className={styles.Bottom}>
           <p>{props.desc}</p>
-          <p>{props.desc}</p>
-          <p>{props.desc}</p>
-          <p>{props.desc}</p>
-          <Box img={githubLogo} name={"github"}></Box>
-          <p>{props.desc}</p>
+          {link}
         </div>
       </div>
     </div>

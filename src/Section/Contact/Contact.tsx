@@ -46,15 +46,24 @@ const Contact = (props: any) => {
     {
       name: "instagram",
       logo: igLogo,
+      link: "https://www.instagram.com/nicolas.ot/",
     },
     {
       name: "github",
       logo: githubLogo,
+      link: "https://github.com/nicolas-ot",
     },
   ];
 
   const socmedBoxs = socmeds.map((socmed) => {
-    return <Box key={socmed.name} img={socmed.logo} name={socmed.name}></Box>;
+    return (
+      <Box
+        link={socmed.link}
+        key={socmed.name}
+        img={socmed.logo}
+        name={socmed.name}
+      ></Box>
+    );
   });
 
   var image = (

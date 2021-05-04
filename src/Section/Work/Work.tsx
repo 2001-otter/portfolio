@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./Work.module.css";
 
@@ -18,47 +18,56 @@ import netflixClone from "../../assets/img/projects-screenshot/netflix_clone.png
 //   desc: string;
 //   pict: HTMLImageElement;
 // }
-
+// Create and order your own burger! A project I made to learn the basic and some of the advance part of React: redux, authentication, axios, and router"
 const Passion = (props: any) => {
   const projects = [
     {
       title: "Burger Order",
       desc:
-        "Create and order your own burger! A project I made to learn the basic and some of the advance part of React: redux, authentication, axios, and router",
+        "A web app for building and ordering your own burger." +
+        " Add as many ingredients as you want. You can also see your order history",
       longerDesc:
-        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+        "Burger Order is a React web app that was build with implementation of Firebase for the database." +
+        " Create your own account so you can see your order history." +
+        " This project was made to sharpen my understanding of the basic and advance parts of React.",
       pict: [burgerOrder, reactProfile, dnd],
       tech: "React · CSS",
+      fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+      source: "https://github.com/nicolas-ot/burger-order",
+      site: "https://burger-builder-1efe7.firebaseapp.com/",
       id: 1,
     },
     {
       title: "React Profile",
       desc: "My website portfolio",
-      longerDesc:
-        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+      longerDesc: "",
 
       pict: [reactProfile],
       tech: "React · CSS · Bootstrap",
+      source: "https://github.com/nicolas-ot/portfolio",
       id: 2,
     },
     {
-      title: "Drag and Drop",
-      desc:
-        "A project manager with drag-and-drop implementation that I made to learn typescript.",
+      title: "Project Manager",
+      desc: "A project manager with drag-and-drop implementation.",
       longerDesc:
-        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+        "This is a small web app project that was built solely with typescript and css for managing projects." +
+        " You can add new projects that will automatically assigned to active projects." +
+        " The projects can then be moved freely with drag-and-drop between Active Projects and Finished Projects",
 
       pict: [dnd],
       tech: "Typescript · CSS",
+      source: "https://github.com/nicolas-ot/task-manager",
+      site: "https://nicolas-ot.github.io/task-manager/",
       id: 3,
     },
     {
       title: "Netflix Clone",
       desc: "A clone of Netflix",
-      longerDesc:
-        "This is a React app that lets you build and customize a burger. It has a Node.js backend with implementation of Firebase for the database and hosting. The project was built using the Redux library. The user can create their own account, login and check their orders.",
+      longerDesc: "This is a netflix clone built mostly using php",
       pict: [netflixClone],
       tech: "PHP · HTML · JS · CSS · MySQL",
+      source: "https://github.com/nicolas-ot/netflix-clone",
       id: 4,
     },
   ];
@@ -87,6 +96,10 @@ const Passion = (props: any) => {
         desc={viewedProject.longerDesc}
         // @ts-ignore: Object is possibly 'null'.
         pict={viewedProject.pict}
+        // @ts-ignore: Object is possibly 'null'.
+        source={viewedProject.source}
+        // @ts-ignore: Object is possibly 'null'.
+        site={viewedProject.site}
       ></ProjectView>
     );
   }
