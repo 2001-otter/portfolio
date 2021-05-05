@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1b94c316.chunk.css",
+    "main.js": "/portfolio/static/js/main.78de385e.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.78de385e.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.40e91d1d.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.40e91d1d.js.map",
+    "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
+    "static/js/2.108657e3.chunk.js": "/portfolio/static/js/2.108657e3.chunk.js",
+    "static/js/2.108657e3.chunk.js.map": "/portfolio/static/js/2.108657e3.chunk.js.map",
+    "static/js/3.5b02c497.chunk.js": "/portfolio/static/js/3.5b02c497.chunk.js",
+    "static/js/3.5b02c497.chunk.js.map": "/portfolio/static/js/3.5b02c497.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.ba69f5a0.chunk.css.map": "/portfolio/static/css/2.ba69f5a0.chunk.css.map",
+    "static/css/main.1b94c316.chunk.css.map": "/portfolio/static/css/main.1b94c316.chunk.css.map",
+    "static/js/2.108657e3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.108657e3.chunk.js.LICENSE.txt",
+    "static/media/Intro.module.css": "/portfolio/static/media/background-img.37964f77.jpg",
+    "static/media/burger-order.39bff415.png": "/portfolio/static/media/burger-order.39bff415.png",
+    "static/media/cplusplus-logo.0a81196c.png": "/portfolio/static/media/cplusplus-logo.0a81196c.png",
+    "static/media/css-logo.4e67641b.png": "/portfolio/static/media/css-logo.4e67641b.png",
+    "static/media/dnd.949e1ea0.png": "/portfolio/static/media/dnd.949e1ea0.png",
+    "static/media/java-logo.5dd2ab04.svg": "/portfolio/static/media/java-logo.5dd2ab04.svg",
+    "static/media/javascript-logo.1a74c56d.svg": "/portfolio/static/media/javascript-logo.1a74c56d.svg",
+    "static/media/mysql-logo.363ca829.png": "/portfolio/static/media/mysql-logo.363ca829.png",
+    "static/media/netflix_clone.0a0dcbdd.png": "/portfolio/static/media/netflix_clone.0a0dcbdd.png",
+    "static/media/nextjs-logo.1b2b52c0.svg": "/portfolio/static/media/nextjs-logo.1b2b52c0.svg",
+    "static/media/react-logo.46599369.png": "/portfolio/static/media/react-logo.46599369.png",
+    "static/media/react_profile.3467bb56.png": "/portfolio/static/media/react_profile.3467bb56.png",
+    "static/media/slick-theme.css": "/portfolio/static/media/slick.c94f7671.ttf",
+    "static/media/ts-logo.16240f48.png": "/portfolio/static/media/ts-logo.16240f48.png",
+    "static/media/usj.fe54fa54.jpg": "/portfolio/static/media/usj.fe54fa54.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40e91d1d.js",
+    "static/css/2.ba69f5a0.chunk.css",
+    "static/js/2.108657e3.chunk.js",
+    "static/css/main.1b94c316.chunk.css",
+    "static/js/main.78de385e.chunk.js"
+  ]
+}
