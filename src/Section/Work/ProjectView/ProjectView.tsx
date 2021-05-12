@@ -6,9 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import styles from "./ProjectView.module.css";
-import githubLogo from "../../../assets/img/github-logo.png";
-
-import Box from "../../Contact/Box/Box";
 
 const ProjectView = (props: any) => {
   var settings = {
@@ -47,10 +44,14 @@ const ProjectView = (props: any) => {
     </div>
   );
 
+  const fullTech = props.fullTech.map((tech: any) => (
+    <li key={tech}>{tech}</li>
+  ));
+
   return (
     <div className={styles.Main}>
       <div className={styles.Header}>
-        <i className="fas fa-times"></i>
+        <i className="fas fa-times" onClick={props.clicked}></i>
         <h3>{props.title}</h3>
       </div>
       <div className={styles.Content}>
@@ -59,11 +60,13 @@ const ProjectView = (props: any) => {
             <Slick {...settings}>{screenshots}</Slick>
           </div>
         </div>
+        <p className={styles.Desc}>{props.desc}</p>
         <div className={styles.Bottom}>
-          <p>{props.desc}</p>
-          {link}
+          <h5>Tech used:</h5>
+          <ul>{fullTech}</ul>
         </div>
       </div>
+      <div className={styles.Footer}>{link}</div>
     </div>
   );
 };

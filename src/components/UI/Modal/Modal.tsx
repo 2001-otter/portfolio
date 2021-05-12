@@ -12,7 +12,6 @@ const Modal = (props: any) => {
   // }
 
   useEffect(() => {
-    console.log("tes");
     if (props.show) {
       document.body.style.overflowY = "hidden";
     } else document.body.style.overflowY = "scroll";

@@ -4,11 +4,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 2rem;
+  scroll-padding: 2.5rem;
 }
 
 :root {
   --clr-primary: #232630;
+  --h2-margin-bottom: 2.7rem;
   /* image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;

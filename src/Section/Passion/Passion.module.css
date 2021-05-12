@@ -6,13 +6,14 @@
   width: 80%;
   font-size: 48px;
   padding-top: 1px;
-  min-height: 100vh;
+  min-height: 94vh;
   width: 100%;
   text-align: center;
 }
 
 .Passion h2 {
-  margin-bottom: 60px;
+  margin-top: 2rem;
+  margin-bottom: var(--h2-margin-bottom);
 }
 
 .Items {
@@ -21,19 +22,20 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  /* align-items: center; */
   padding: 0 50px;
 }
 
 .Item {
+  /* background-color: white; */
   flex: 1;
-  min-height: 30rem;
   min-width: 20rem;
   padding: 2rem;
-  border: 1px solid rgba(230, 215, 215, 0.897);
-  box-shadow: 2px 3px rgb(216, 211, 211);
+  /* border: 1px solid rgba(230, 215, 215, 0.897);
+  box-shadow: 2px 3px rgb(216, 211, 211); */
   cursor: default;
-  margin: 0 2rem 4rem 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 
 /* .Item:hover {
@@ -41,6 +43,7 @@
 } */
 
 .Item h3 {
-  margin: 0px 0 30px 0px;
+  /* margin-bottom: 2rem; */
+  margin-top: 3rem;
   font-weight: 450;
 }

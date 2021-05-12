@@ -2,31 +2,27 @@
   display: flex;
 }
 .Modal {
-  display: flex; /* relevant part */
-  flex-direction: column; /* relevant part */
-  overflow: hidden; /* relevant part */
+  /* display: flex; 
+  flex-direction: column; 
+  overflow: hidden;  */
 
   position: fixed;
   z-index: 500;
-  width: 90%;
-  /* height: 90vh; */
+  width: 60%;
 
-  --height: 40rem;
-  min-height: var(--height);
+  --height: 42rem;
+  max-height: var(--height);
   top: calc(50% - var(--height) / 2);
 
-  left: 5%;
+  left: calc(50% - 30%);
+
   box-sizing: border-box;
   transition: all 0.3s ease-out;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
   .Modal {
-    /* overflow-y: hidden; */
-    width: 60%;
-    /* --height: 42rem;
-    min-height: var(--height); */
-    top: calc(49% - var(--height) / 2);
-    left: calc(50% - 30%);
+    width: 90%;
+    left: 5%;
   }
 }

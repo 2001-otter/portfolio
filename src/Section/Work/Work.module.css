@@ -13,7 +13,7 @@
 }
 
 .Passion h2 {
-  margin-bottom: 60px;
+  margin-bottom: var(--h2-margin-bottom);
 }
 
 .Items {

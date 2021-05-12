@@ -1,17 +1,62 @@
 import About from "./About/About";
+import Contact from "./Contact/Contact";
 import Intro from "./Intro/Intro";
 import Passion from "./Passion/Passion";
 import Work from "./Work/Work";
-import Contact from "./Contact/Contact";
 
-const Section = (props: any) => {
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const Section = ({ changeSection }: any) => {
+  const [refIntro, inViewIntro] = useInView({
+    /* Optional options */
+    rootMargin: "-200px 0px 0px 0px",
+  });
+  const [refAbout, inViewAbout] = useInView({
+    /* Optional options */
+    rootMargin: "-200px 0px 0px 0px",
+  });
+  const [refPassion, inViewPassion] = useInView({
+    /* Optional options */
+    rootMargin: "-200px 0px 0px 0px",
+  });
+  const [refWork, inViewWork] = useInView({
+    /* Optional options */
+    rootMargin: "-200px 0px 0px 0px",
+  });
+  const [refContact, inViewContact] = useInView({
+    /* Optional options */
+    rootMargin: "-200px 0px 0px 0px",
+  });
+
+  useEffect(() => {
+    if (inViewIntro) {
+      changeSection("intro");
+    } else if (inViewAbout) {
+      changeSection("about");
+    } else if (inViewPassion) {
+      changeSection("work");
+    } else if (inViewWork) {
+      changeSection("projects");
+    } else if (inViewContact) {
+      changeSection("contact");
+    }
+  }, [
+    inViewIntro,
+    inViewAbout,
+    inViewPassion,
+    inViewWork,
+    inViewContact,
+    changeSection,
+  ]);
+
   return (
     <>
-      <Intro></Intro>
-      <About></About>
-      <Passion></Passion>
-      <Work></Work>
-      <Contact></Contact>
+      <Intro ref={refIntro}></Intro>
+      <About ref={refAbout}></About>
+      <Passion ref={refPassion}></Passion>
+      <Work ref={refWork}></Work>
+      <Contact ref={refContact}></Contact>
     </>
   );
 };

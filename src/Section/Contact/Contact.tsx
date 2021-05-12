@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Contact.module.css";
 
 import igLogo from "../../assets/img/socmed_logo/ig_logo.png";
 import githubLogo from "../../assets/img/socmed_logo/github_logo.png";
 import triangle from "../../assets/img/triangle2.png";
-import smallTriangle from "../../assets/img/triangle3.png";
 
 import Box from "./Box/Box";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const Contact = (props: any) => {
+import emailjs from "emailjs-com";
+
+const Contact = React.forwardRef<any>((props: any, ref) => {
   function _calculateScrollbarWidth() {
     document.documentElement.style.setProperty(
       "--scrollbar-width",
@@ -28,19 +29,6 @@ const Contact = (props: any) => {
 
   // recalculate on load (assets loaded as well)
   window.addEventListener("load", _calculateScrollbarWidth);
-
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const [height, setHeight] = useState(window.innerHeight);
-  // const updateDimensions = () => {
-  //   setWidth(window.innerWidth);
-  //   setHeight(window.innerHeight);
-  //   console.log(window.innerWidth);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", updateDimensions);
-  //   return () => window.removeEventListener("resize", updateDimensions);
-  // }, []);
 
   const socmeds = [
     {
@@ -76,52 +64,62 @@ const Contact = (props: any) => {
       }}
     />
   );
-  // if (width < 600) {
-  //   console.log("tes");
-  //   image = (
-  //     <img
-  //       src={smallTriangle}
-  //       alt="triangle"
-  //       style={{
-  //         width: "calc(100vw - var(--scrollbar-width))",
-  //         height: "4rem",
-  //       }}
-  //     />
-  //   );
-  // }
+
+  const onFormSubmit = (e: any) => {
+    e.preventDefault();
+
+    const fields = ["name", "email", "message"];
+
+    const email: any = {
+      name: "null",
+      email: "null",
+      message: "null",
+    };
+
+    fields.forEach((field) => {
+      email[field] = (document.getElementById(field) as HTMLInputElement).value;
+
+      (document.getElementById(field) as HTMLInputElement).value = "";
+    });
+
+    emailjs.send(
+      "gmail",
+      "template_mvwzdeh",
+      email,
+      "user_TlrDTDTr8V6ogaCbKcNiT"
+    );
+  };
 
   return (
     <>
-      <section className={styles.Content} id="contact">
+      <section className={styles.Content} id="contact" ref={ref}>
         {image}
         <h1>Contact</h1>
         <div className={styles.Form}>
-          <Form>
+          <Form onSubmit={onFormSubmit}>
             <Form.Group controlId="name">
               <Form.Control type="text" placeholder="name" />
             </Form.Group>
             <Form.Group controlId="email">
               <Form.Control type="email" placeholder="name@example.com" />
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Group controlId="message">
               <Form.Control as="textarea" rows={3} placeholder="message" />
             </Form.Group>
+            <Button variant="light" type="submit">
+              Submit
+            </Button>
           </Form>
-          {/* <button>tes</button> */}
-          <Button variant="light">Submit</Button>
         </div>
         <div className={styles.Arrow}>
           <a href={"#about"}>
-            <i
-              className="fas fa-arrow-circle-up fa-3x"
-              // onClick={faClickHandle()}
-            ></i>
+            <i className="fas fa-arrow-circle-up fa-3x"></i>
           </a>
         </div>
         <div className={styles.Socmed}>{socmedBoxs}</div>
       </section>
     </>
   );
-};
+});
 
 export default Contact;

@@ -14,11 +14,11 @@ import cplusplusLogo from "../../assets/img/cplusplus-logo.png";
 import tsLogo from "../../assets/img/ts-logo.png";
 import mysqlLogo from "../../assets/img/mysql-logo.png";
 
-const About = (props: any) => {
+const About = React.forwardRef<any>((props: any, ref) => {
   return (
     <>
       {/* <div className={styles.Dummy}></div> */}
-      <section className={styles.Content} id="about">
+      <section className={styles.Content} id="about" ref={ref}>
         <div className={styles.Left}>
           <div className={styles.About}>
             <h2>About me</h2>
@@ -29,16 +29,22 @@ const About = (props: any) => {
               <img alt="profile" src={image}></img>
             </div>
             <p>
-              I'm a web developer with a passion for front end development. I'm
-              also a student that is trying to find my contribution to society
-              and the world through my code. I'm currently a first year student
+              Becoming a developer has been my passion ever since I learned
+              about web development in highschool. Now, I'm a first year student
               at Technische Universität Berlin pursuing a degree in information
-              science. I aspire toward a career that will allow me to grow as a
-              person and as a programmer.
+              science. Through my code, I'm hoping to somehow make the world a
+              better place. I'm looking for a career that will allow me to grow
+              as a person and as a programmer.
               <br />
               <br />
-              When I'm not on the computer, I enjoy playing guitar, reading
-              books, and jogging.
+              When not online, I enjoy playing guitar, reading books, and
+              jogging.
+              <br />
+              <br />
+              <a href="#contact">
+                If you think we should make something awesome together, let me
+                know!
+              </a>
               <br />
               <br />
               Current location: Berlin, Germany
@@ -89,13 +95,13 @@ const About = (props: any) => {
                 Projects that will allow me to chanel and develop my creative
                 and logical thinking skill
               </li>
-              <li>Fun and creative projects</li>
+              <li>Projects that support good causes</li>
             </ul>
           </div>
         </div>
       </section>
     </>
   );
-};
+});
 
 export default About;

@@ -3,10 +3,21 @@ import React from "react";
 
 import styles from "./NavigationItem.module.css";
 
-const navigationItem = (props: any) => (
-  <li className={styles.NavigationItem}>
-    <a href={"#" + props.link}>{props.children}</a>
-  </li>
-);
+const navigationItem = (props: any) => {
+  // if (document.getElementById(props.link) !== null)
+  // @ts-ignore: Object is possibly 'null'.
+  // document.getElementById(props.link).focus();
+  return (
+    <li
+      className={
+        !props.active
+          ? styles.NavigationItem
+          : [styles.NavigationItem, styles.Active].join(" ")
+      }
+    >
+      <a href={"#" + props.link}>{props.children}</a>
+    </li>
+  );
+};
 
 export default navigationItem;

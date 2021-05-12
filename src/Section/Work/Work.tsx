@@ -1,26 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import styles from "./Work.module.css";
 
 import Modal from "../../components/UI/Modal/Modal";
 import Project from "./Project/Project";
 import ProjectView from "./ProjectView/ProjectView";
-import Slider from "./Slider/Slider";
 
 import burgerOrder from "../../assets/img/projects-screenshot/burger-order.png";
 import dnd from "../../assets/img/projects-screenshot/dnd.png";
 
 import reactProfile from "../../assets/img/projects-screenshot/react_profile.png";
-import netflixClone from "../../assets/img/projects-screenshot/netflix_clone.png";
 
-// interface Project {
-//   title: string;
-//   desc: string;
-//   pict: HTMLImageElement;
-// }
-// Create and order your own burger! A project I made to learn the basic and some of the advance part of React: redux, authentication, axios, and router"
-const Passion = (props: any) => {
-  const projects = [
+type ProjectType = {
+  title: string;
+  desc: string;
+  longerDesc: string;
+  pict: string[];
+  tech: string;
+  fullTech?: string[];
+  source: string;
+  site?: string;
+  id: number;
+};
+
+const Passion = React.forwardRef<any>((props: any, ref) => {
+  const projects: ProjectType[] = [
     {
       title: "Burger Order",
       desc:
@@ -38,16 +42,6 @@ const Passion = (props: any) => {
       id: 1,
     },
     {
-      title: "React Profile",
-      desc: "My website portfolio",
-      longerDesc: "",
-
-      pict: [reactProfile],
-      tech: "React · CSS · Bootstrap",
-      source: "https://github.com/nicolas-ot/portfolio",
-      id: 2,
-    },
-    {
       title: "Project Manager",
       desc: "A project manager with drag-and-drop implementation.",
       longerDesc:
@@ -57,26 +51,39 @@ const Passion = (props: any) => {
 
       pict: [dnd],
       tech: "Typescript · CSS",
+      fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+
       source: "https://github.com/nicolas-ot/task-manager",
       site: "https://nicolas-ot.github.io/task-manager/",
-      id: 3,
+      id: 2,
     },
     {
-      title: "Netflix Clone",
-      desc: "A clone of Netflix",
-      longerDesc: "This is a netflix clone built mostly using php",
-      pict: [netflixClone],
-      tech: "PHP · HTML · JS · CSS · MySQL",
-      source: "https://github.com/nicolas-ot/netflix-clone",
-      id: 4,
+      title: "React Profile",
+      desc: "My website portfolio",
+      longerDesc: "",
+
+      pict: [reactProfile],
+      tech: "React · CSS · Bootstrap",
+      fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+      source: "https://github.com/nicolas-ot/portfolio",
+      id: 3,
     },
+    // {
+    //   title: "Netflix Clone",
+    //   desc: "A clone of Netflix",
+    //   longerDesc: "This is a netflix clone built mostly using php",
+    //   pict: [netflixClone],
+    //   tech: "PHP · HTML · JS · CSS · MySQL",
+    //   fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+    //   source: "https://github.com/nicolas-ot/netflix-clone",
+    //   id: 4,
+    // },
   ];
 
   const [viewing, setViewing] = useState(false);
   const [viewedProject, setViewedProject] = useState(null);
 
   let projectView = null;
-  console.log("masuk2");
 
   const clickHandler = (project: any) => {
     setViewing(true);
@@ -99,7 +106,10 @@ const Passion = (props: any) => {
         // @ts-ignore: Object is possibly 'null'.
         source={viewedProject.source}
         // @ts-ignore: Object is possibly 'null'.
-        site={viewedProject.site}
+        site={viewedProject?.site}
+        // @ts-ignore: Object is possibly 'null'.
+        fullTech={viewedProject.fullTech}
+        clicked={clickAwayHandler}
       ></ProjectView>
     );
   }
@@ -117,21 +127,10 @@ const Passion = (props: any) => {
     );
   });
 
-  // const projectsView = projects.map((project) => {
-  //   return (
-  //     <ProjectView
-  //       title={project.title}
-  //       desc={project.desc}
-  //       pict={project.pict}
-  //     ></ProjectView>
-  //   );
-  // });
-
   return (
-    <section className={styles.Content} id="projects">
+    <section className={styles.Content} id="projects" ref={ref}>
       <Modal show={viewing} modalClosed={clickAwayHandler}>
         {projectView}
-        {/* <Slider selected={viewedProject}>{projectsView}</Slider> unused until slickGoTo fixed*/}
       </Modal>
       <div className={styles.Passion}>
         <h2>My projects</h2>
@@ -139,6 +138,6 @@ const Passion = (props: any) => {
       </div>
     </section>
   );
-};
+});
 
 export default Passion;

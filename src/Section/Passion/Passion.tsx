@@ -1,62 +1,54 @@
 import React from "react";
-
 import styles from "./Passion.module.css";
+
 import Logo from "./Logo/Logo";
 
-import developmentLogo from "../../assets/img/development-logo.jpg";
-import buildLogo from "../../assets/img/build-logo.png";
-
-const Passion = (props: any) => {
+const Passion = React.forwardRef<any>((props: any, ref) => {
   return (
-    <section className={styles.Content} id="passion">
+    <section className={styles.Content} id="work" ref={ref}>
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Passion}>
-        <h2>What I passionate about</h2>
+        <h2>What I can help you with</h2>
         <div className={styles.Items}>
           <div className={styles.Item}>
             <Logo>
               <i className="fas fa-code fa-7x"></i>
             </Logo>
-            <h3>Development</h3>
+            <h3>Front End Development</h3>
             <p>
               With a passion and strong foundation in programming, I'm eager to
-              contribute to the world through my code. That's why I'm trying to
-              improve everyday by not just writing a code that works, but also a
-              clean and undesrstandable code, that does well what is intended to
-              do and can be reused by others.
+              contribute to the world through my code. A code that not only
+              works, but also a code that is clean and easy to read, that does
+              well what is intended to do and can be reused by others.
             </p>
           </div>
           <div className={styles.Item}>
             <Logo>
               <i className="fas fa-tools fa-7x"></i>
             </Logo>
-            <h3>Improve</h3>
+            <h3>Product Development</h3>
             <p>
-              "To be more and to do more"—a motto that I always adhere to. Life
-              is a lifelong journey of improvement. I aspire to improve not only
-              my technical skill, but also my soft skill as a programmer. I
-              believe that to lead a meaningful life, it's essential to improve
-              on every important aspect of life.
+              I'm interested in helping you get your creative idea into the
+              world. Creating and maintaining product development roadmaps to
+              prioritize, summarize and communicate the plans to build and
+              ultimately release the product. This is where the magic happens.
             </p>
           </div>
           <div className={styles.Item}>
             <Logo>
-              <i className="fas fa-users fa-7x"></i>
+              <i className="fas fa-search fa-7x"></i>
             </Logo>
-            <h3>Colaborate</h3>
+            <h3>Performance & SEO</h3>
             <p>
-              Contrary to the popular image of a programmer: sitting alone in
-              front of their computer in a dark room, I find that working in a
-              team is a crucial part of developing a great project.
-              Interchanging ideas, discussing the best solution to a problem,
-              strengthening each other weaknesses; there are many advantages of
-              working together in a team.
+              A website is not done when it's "done"; there is always room for
+              improvement. Building an optimized website that is fast, easy to
+              find and turn users into customers is one of my main priority.
             </p>
           </div>
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Passion;

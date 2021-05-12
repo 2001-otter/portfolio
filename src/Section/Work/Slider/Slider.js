@@ -52,7 +52,6 @@ const Slider = (props) => {
   useEffect(() => {
     if (props.selected) setInitialSlide(props.selected.id);
     slickSlider.slickGoTo(initialSlide);
-    console.log(initialSlide);
   }, [props.selected, initialSlide]);
 
   return (
