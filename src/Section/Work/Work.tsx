@@ -7,6 +7,11 @@ import Project from "./Project/Project";
 import ProjectView from "./ProjectView/ProjectView";
 
 import burgerOrder from "../../assets/img/projects-screenshot/burger-order.png";
+import burger2 from "../../assets/img/projects-screenshot/burger-order/2.png";
+import burger3 from "../../assets/img/projects-screenshot/burger-order/3.png";
+import burger4 from "../../assets/img/projects-screenshot/burger-order/4.png";
+import burger5 from "../../assets/img/projects-screenshot/burger-order/5.png";
+import burger6 from "../../assets/img/projects-screenshot/burger-order/6.png";
 import dnd from "../../assets/img/projects-screenshot/dnd.png";
 
 import reactProfile from "../../assets/img/projects-screenshot/react_profile.png";
@@ -33,9 +38,9 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
       longerDesc:
         "Burger Order is a React web app that was build with implementation of Firebase for the database." +
         " Create your own account so you can see your order history." +
-        " This project was made to sharpen my understanding of the basic and advance parts of React.",
-      pict: [burgerOrder, reactProfile, dnd],
-      tech: "React · CSS",
+        " This project was made to sharpen my understanding of the advance parts of React.",
+      pict: [burgerOrder, burger2, burger3, burger4, burger5, burger6],
+      tech: "React",
       fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
       source: "https://github.com/nicolas-ot/burger-order",
       site: "https://burger-builder-1efe7.firebaseapp.com/",
@@ -50,7 +55,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
         " The projects can then be moved freely with drag-and-drop between Active Projects and Finished Projects",
 
       pict: [dnd],
-      tech: "Typescript · CSS",
+      tech: "Typescript",
       fullTech: ["Typescript", "CSS"],
 
       source: "https://github.com/nicolas-ot/task-manager",
@@ -63,7 +68,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
       longerDesc: "",
 
       pict: [reactProfile],
-      tech: "React · CSS",
+      tech: "React",
       fullTech: ["React", "CSS", "Bootstrap"],
       source: "https://github.com/nicolas-ot/portfolio",
       id: 3,

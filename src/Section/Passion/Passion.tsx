@@ -64,9 +64,10 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
             </Logo>
             <h3>Performance & SEO</h3>
             <p>
-              A website is not done when it's "done"; there is always room for
-              improvement. Building an optimized website that is fast, easy to
-              find and turn users into customers is one of my main priority.
+              A website should not only function as it should. There are many
+              other things to be considered. Building an optimized website that
+              is fast, easy to find and turn users into customers is one of my
+              main priority.
             </p>
           </div>
         </div>

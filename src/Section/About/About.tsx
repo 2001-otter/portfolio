@@ -65,6 +65,7 @@ const About = React.forwardRef<any>((props: any, ref) => {
         </div>
         <div className={styles.Right}>
           <div className={styles.Tools}>
+            {/* <i className="fas fa-cog fa-2x"></i> */}
             <div
               data-aos="fade-down"
               data-aos-anchor-placement="top-center"
