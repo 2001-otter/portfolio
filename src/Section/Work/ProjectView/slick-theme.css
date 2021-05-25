@@ -15,3 +15,15 @@ body .slick-next:before {
   outline: 0;
   outline: none;
 }
+
+.slick-prev {
+  left: -40px !important;
+}
+
+.slick-next {
+  right: -40px !important;
+}
+
+.slick-dots {
+  bottom: -35px !important;
+}

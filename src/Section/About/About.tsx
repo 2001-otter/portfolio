@@ -1,7 +1,8 @@
 import React from "react";
 
 import styles from "./About.module.css";
-import image from "../../assets/img/usj.jpg";
+// @ts-ignore
+import image from "../../assets/img/1.JPG";
 
 import htmlLogo from "../../assets/img/html-logo.jpg";
 import cssLogo from "../../assets/img/css-logo.png";
@@ -22,11 +23,11 @@ const About = React.forwardRef<any>((props: any, ref) => {
         <div className={styles.Left}>
           <div className={styles.About}>
             <h2>About me</h2>
-            <hr className={styles.One}></hr>
+            {/* <hr className={styles.One}></hr>
             <hr className={styles.Two}></hr>
-            <hr className={styles.Three}></hr>
+            <hr className={styles.Three}></hr> */}
             <div className={styles.Img}>
-              <img alt="profile" src={image}></img>
+              {/* <img alt="profile" src={image}></img> */}
             </div>
             <p>
               Becoming a developer has been my passion ever since I learned
@@ -39,12 +40,12 @@ const About = React.forwardRef<any>((props: any, ref) => {
               <br />
               When not online, I enjoy playing guitar, reading books, and
               jogging.
-              <br />
+              {/* <br />
               <br />
               <a href="#contact">
                 If you think we should make something awesome together, let me
                 know!
-              </a>
+              </a> */}
               <br />
               <br />
               Current location: Berlin, Germany
@@ -95,7 +96,10 @@ const About = React.forwardRef<any>((props: any, ref) => {
                 Projects that will allow me to chanel and develop my creative
                 and logical thinking skill
               </li>
-              <li>Projects that support good causes</li>
+              <li>
+                Projects that help developers and programmers (e.g. Github,
+                Codepen, and Bootstrap)
+              </li>
             </ul>
           </div>
         </div>

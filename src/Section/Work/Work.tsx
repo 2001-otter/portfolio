@@ -51,7 +51,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
 
       pict: [dnd],
       tech: "Typescript · CSS",
-      fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+      fullTech: ["Typescript", "CSS"],
 
       source: "https://github.com/nicolas-ot/task-manager",
       site: "https://nicolas-ot.github.io/task-manager/",
@@ -63,8 +63,8 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
       longerDesc: "",
 
       pict: [reactProfile],
-      tech: "React · CSS · Bootstrap",
-      fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
+      tech: "React · CSS",
+      fullTech: ["React", "CSS", "Bootstrap"],
       source: "https://github.com/nicolas-ot/portfolio",
       id: 3,
     },

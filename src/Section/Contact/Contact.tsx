@@ -98,13 +98,13 @@ const Contact = React.forwardRef<any>((props: any, ref) => {
         <div className={styles.Form}>
           <Form onSubmit={onFormSubmit}>
             <Form.Group controlId="name">
-              <Form.Control type="text" placeholder="name" />
+              <Form.Control type="text" placeholder="Name" />
             </Form.Group>
             <Form.Group controlId="email">
-              <Form.Control type="email" placeholder="name@example.com" />
+              <Form.Control type="email" placeholder="Email" />
             </Form.Group>
             <Form.Group controlId="message">
-              <Form.Control as="textarea" rows={3} placeholder="message" />
+              <Form.Control as="textarea" rows={3} placeholder="Your Message" />
             </Form.Group>
             <Button variant="light" type="submit">
               Submit

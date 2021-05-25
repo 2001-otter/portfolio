@@ -1,5 +1,7 @@
 .Container {
   display: flex;
+  /* height: 100vh; */
+  /* display: none; */
 }
 .Modal {
   /* display: flex; 
