@@ -9,16 +9,16 @@ const navigationItems = (props: any) => {
   }
 
   const navList = ["about", "work", "projects", "contact"];
+  let counter = 0;
   const nav = navList.map((navItem) => {
-    if (navItem === props.currentSection)
-      return (
-        <NavigationItem link={navItem} active={true} key={navItem}>
-          {jsUcfirst(navItem)}
-        </NavigationItem>
-      );
-
+    counter++;
     return (
-      <NavigationItem link={navItem} active={false} key={navItem}>
+      <NavigationItem
+        link={navItem}
+        active={navItem === props.currentSection}
+        key={navItem}
+        id={counter}
+      >
         {jsUcfirst(navItem)}
       </NavigationItem>
     );

@@ -94,8 +94,12 @@ const Contact = React.forwardRef<any>((props: any, ref) => {
     <>
       <section className={styles.Content} id="contact" ref={ref}>
         {image}
-        <h1>Contact</h1>
-        <div className={styles.Form}>
+        <h1 data-aos="slide-right">Contact</h1>
+        <div
+          className={styles.Form}
+          data-aos="slide-up"
+          data-aos-duration="400"
+        >
           <Form onSubmit={onFormSubmit}>
             <Form.Group controlId="name">
               <Form.Control type="text" placeholder="Name" />

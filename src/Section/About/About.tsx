@@ -22,14 +22,25 @@ const About = React.forwardRef<any>((props: any, ref) => {
       <section className={styles.Content} id="about" ref={ref}>
         <div className={styles.Left}>
           <div className={styles.About}>
-            <h2>About me</h2>
+            <h2
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="1000"
+            >
+              About me
+            </h2>
             {/* <hr className={styles.One}></hr>
             <hr className={styles.Two}></hr>
             <hr className={styles.Three}></hr> */}
-            <div className={styles.Img}>
+            <div
+              className={styles.Img}
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="2000"
+            >
               {/* <img alt="profile" src={image}></img> */}
             </div>
-            <p>
+            <p data-aos="fade-down">
               Becoming a developer has been my passion ever since I learned
               about web development in highschool. Now, I'm a first year student
               at Technische Universität Berlin pursuing a degree in information
@@ -54,49 +65,85 @@ const About = React.forwardRef<any>((props: any, ref) => {
         </div>
         <div className={styles.Right}>
           <div className={styles.Tools}>
-            <h2>Technologies I've been working with</h2>
-            <div className={styles.Logo}>
-              <div>
-                <img src={htmlLogo} alt="htmlLogo"></img>
-              </div>
-              <div>
-                <img src={cssLogo} alt="cssLogo"></img>
-              </div>
-              <div>
-                <img src={javascriptLogo} alt="javascriptLogo"></img>
-              </div>
-              <div>
-                <img src={reactLogo} alt="reactLogo"></img>
-              </div>
-              <div>
-                <img src={tsLogo} alt="tsLogo"></img>
-              </div>
-              <div className={styles.Black}>
-                <img src={nextjsLogo} alt="nextjsLogo"></img>
-              </div>
-              <div>
-                <img src={cplusplusLogo} alt="cplusplusLogo"></img>
-              </div>
-              <div>
-                <img src={javaLogo} alt="javaLogo"></img>
-              </div>
-              <div className={styles.Black}>
-                <img src={githubLogo} alt="githubLogo"></img>
-              </div>
-              <div>
-                <img src={mysqlLogo} alt="mysqlLogo"></img>
+            <div
+              data-aos="fade-down"
+              data-aos-anchor-placement="top-center"
+              data-aos-anchor={"." + styles.About + " h2"}
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <h2>Technologies I've been working with</h2>
+              <div className={styles.Logo}>
+                <div>
+                  <img src={htmlLogo} alt="htmlLogo"></img>
+                </div>
+                <div>
+                  <img src={cssLogo} alt="cssLogo"></img>
+                </div>
+                <div>
+                  <img src={javascriptLogo} alt="javascriptLogo"></img>
+                </div>
+                <div>
+                  <img src={reactLogo} alt="reactLogo"></img>
+                </div>
+                <div>
+                  <img src={tsLogo} alt="tsLogo"></img>
+                </div>
+                <div className={styles.Black}>
+                  <img src={nextjsLogo} alt="nextjsLogo"></img>
+                </div>
+                <div>
+                  <img src={cplusplusLogo} alt="cplusplusLogo"></img>
+                </div>
+                <div>
+                  <img src={javaLogo} alt="javaLogo"></img>
+                </div>
+                <div className={styles.Black}>
+                  <img src={githubLogo} alt="githubLogo"></img>
+                </div>
+                <div>
+                  <img src={mysqlLogo} alt="mysqlLogo"></img>
+                </div>
               </div>
             </div>
           </div>
           <div className={styles.Preferred}>
-            <h2>Projects and opportunities I'm interested in</h2>
+            <h2
+              data-aos="fade-down"
+              data-aos-anchor={"." + styles.Tools}
+              data-aos-anchor-placement="center-center"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              Projects and opportunities I'm interested in
+            </h2>
             <ul>
-              <li>Web developing projects</li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-anchor={"." + styles.Preferred}
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                Web developing projects
+              </li>
+              <li
+                data-aos="fade-down"
+                data-aos-anchor={"." + styles.Preferred}
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+              >
                 Projects that will allow me to chanel and develop my creative
                 and logical thinking skill
               </li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-anchor={"." + styles.Preferred}
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-delay="900"
+                data-aos-duration="1000"
+              >
                 Projects that help developers and programmers (e.g. Github,
                 Codepen, and Bootstrap)
               </li>

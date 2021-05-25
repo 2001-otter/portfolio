@@ -28,8 +28,8 @@ const Navigation = (props: any) => {
 
   return (
     <header className={isScrolled ? styles.Scrolled : styles.Top}>
-      <div className={styles.Name}>
-        <span>Nicolas Theodarus</span>
+      <div className={styles.Name} data-aos="fade-down">
+        <a href="https://nicolas-ot.github.io/portfolio/">Nicolas Theodarus</a>
       </div>
       <nav className={styles.DesktopOnly}>
         <NavigationItems currentSection={props.currentSection} />

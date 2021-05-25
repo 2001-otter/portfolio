@@ -118,6 +118,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
     return (
       <Project
         key={project.id}
+        id={project.id}
         onClick={() => clickHandler(project)}
         title={project.title}
         desc={project.desc}
@@ -133,7 +134,9 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
         {projectView}
       </Modal>
       <div className={styles.Passion}>
-        <h2>My projects</h2>
+        <h2 data-aos="slide-left" data-aos-duration="700">
+          My projects
+        </h2>
         <div className={styles.Items}>{projectsComponent}</div>
       </div>
     </section>

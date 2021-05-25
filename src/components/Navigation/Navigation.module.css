@@ -41,6 +41,11 @@
   color: white;
 }
 
+.Name a {
+  color: white;
+  text-decoration: none;
+}
+
 .DesktopOnly {
   /* display: none; */
   height: 100%;

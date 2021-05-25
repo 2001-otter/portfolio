@@ -3,8 +3,17 @@ import React from "react";
 import styles from "./Project.module.css";
 
 const Project = (props: any) => {
+  const delay = 200 * props.id;
+  // console.log(props.key);
+
   return (
-    <div className={styles.Item} onClick={props.onClick}>
+    <div
+      className={styles.Item}
+      onClick={props.onClick}
+      data-aos="slide-up"
+      data-aos-duration={1000}
+      data-aos-delay={delay}
+    >
       <div className={styles.Overlay}>
         <div className={styles.Search}>
           <i className="fas fa-search-plus fa-2x"></i>

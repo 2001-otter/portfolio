@@ -5,12 +5,24 @@ import Logo from "./Logo/Logo";
 
 const Passion = React.forwardRef<any>((props: any, ref) => {
   return (
-    <section className={styles.Content} id="work" ref={ref}>
+    <section
+      className={styles.Content}
+      id="work"
+      ref={ref}
+      data-aos="slide-right"
+      data-aos-duration="700"
+    >
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Passion}>
         <h2>What I can help you with</h2>
         <div className={styles.Items}>
-          <div className={styles.Item}>
+          <div
+            className={styles.Item}
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <Logo>
               <i className="fas fa-code fa-7x"></i>
             </Logo>
@@ -22,7 +34,13 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
               well what is intended to do and can be reused by others.
             </p>
           </div>
-          <div className={styles.Item}>
+          <div
+            className={styles.Item}
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+          >
             <Logo>
               <i className="fas fa-tools fa-7x"></i>
             </Logo>
@@ -34,7 +52,13 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
               ultimately release the product. This is where the magic happens.
             </p>
           </div>
-          <div className={styles.Item}>
+          <div
+            className={styles.Item}
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="900"
+            data-aos-duration="1000"
+          >
             <Logo>
               <i className="fas fa-search fa-7x"></i>
             </Logo>
