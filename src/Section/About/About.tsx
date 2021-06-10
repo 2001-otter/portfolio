@@ -21,36 +21,34 @@ const About = React.forwardRef<any>((props: any, ref) => {
       {/* <div className={styles.Dummy}></div> */}
       <section className={styles.Content} id="about" ref={ref}>
         <div className={styles.Left}>
-          <div className={styles.About}>
-            <h2
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-center"
-              data-aos-duration="1000"
-            >
-              About me
-            </h2>
+          <div
+            className={styles.About}
+            data-aos="fade"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="400"
+          >
+            <h2>About me</h2>
             {/* <hr className={styles.One}></hr>
             <hr className={styles.Two}></hr>
             <hr className={styles.Three}></hr> */}
-            <div
-              className={styles.Img}
-              data-aos="fade-down"
-              data-aos-anchor-placement="top-center"
-              data-aos-duration="2000"
-            >
+            <div className={styles.Img}>
               {/* <img alt="profile" src={image}></img> */}
             </div>
-            <p data-aos="fade-down">
-              Becoming a developer has been my passion ever since I learned
-              about web development in highschool. Now, I'm a first year student
-              at Technische Universität Berlin pursuing a degree in information
-              science. Through my code, I'm hoping to somehow make the world a
-              better place. I'm looking for a career that will allow me to grow
-              as a person and as a programmer.
+            <p>
+              I'm a first-year student at Technische Universität Berlin,
+              pursuing a degree in Computer Science.
               <br />
               <br />
-              When not online, I enjoy playing guitar, reading books, and
-              jogging.
+              Programming has been my passion ever since I was in High School.
+              Like an art, programming could create something that people can
+              interact, use, and work with. When I manage to develop a code that
+              saves people time and prevents them from doing tedious tasks, I
+              will know that I have made a difference in life. It's an amazing
+              feeling.
+              <br />
+              <br />
+              Playing guitar, reading books, and jogging are my most favourite
+              activities when I'm not in front of my computer.
               {/* <br />
               <br />
               <a href="#contact">
@@ -67,11 +65,9 @@ const About = React.forwardRef<any>((props: any, ref) => {
           <div className={styles.Tools}>
             {/* <i className="fas fa-cog fa-2x"></i> */}
             <div
-              data-aos="fade-down"
+              data-aos="fade"
               data-aos-anchor-placement="top-center"
-              data-aos-anchor={"." + styles.About + " h2"}
-              data-aos-duration="1000"
-              data-aos-delay="500"
+              data-aos-duration="400"
             >
               <h2>Technologies I've been working with</h2>
               <div className={styles.Logo}>
@@ -114,7 +110,6 @@ const About = React.forwardRef<any>((props: any, ref) => {
               data-aos-anchor={"." + styles.Tools}
               data-aos-anchor-placement="center-center"
               data-aos-duration="1000"
-              data-aos-delay="500"
             >
               Projects and opportunities I'm interested in
             </h2>
@@ -123,8 +118,7 @@ const About = React.forwardRef<any>((props: any, ref) => {
                 data-aos="fade-down"
                 data-aos-anchor={"." + styles.Preferred}
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="300"
-                data-aos-duration="1000"
+                data-aos-duration="500"
               >
                 Web developing projects
               </li>
@@ -132,8 +126,8 @@ const About = React.forwardRef<any>((props: any, ref) => {
                 data-aos="fade-down"
                 data-aos-anchor={"." + styles.Preferred}
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="600"
-                data-aos-duration="1000"
+                data-aos-delay="200"
+                data-aos-duration="500"
               >
                 Projects that will allow me to chanel and develop my creative
                 and logical thinking skill
@@ -142,8 +136,8 @@ const About = React.forwardRef<any>((props: any, ref) => {
                 data-aos="fade-down"
                 data-aos-anchor={"." + styles.Preferred}
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="900"
-                data-aos-duration="1000"
+                data-aos-delay="400"
+                data-aos-duration="500"
               >
                 Projects that help developers and programmers (e.g. Github,
                 Codepen, and Bootstrap)

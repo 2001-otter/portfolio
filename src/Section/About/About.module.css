@@ -161,7 +161,7 @@
   border-style: solid;
   border-color: var(--var-border-color);
 
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem 1rem 2rem;
 }
 
 .Tools {
@@ -223,11 +223,17 @@
   padding-left: 0;
 }
 
+@media (max-width: 900px) {
+  .Preferred ul {
+    margin-top: 1.5rem;
+  }
+}
+
 .Preferred li {
   background-color: #eee;
-
+  border-radius: 10px;
   /* border: 1px solid; */
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   margin-top: 1rem;
   text-align: center;
   list-style: none;

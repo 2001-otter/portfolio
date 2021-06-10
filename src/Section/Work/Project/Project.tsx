@@ -11,7 +11,7 @@ const Project = (props: any) => {
       className={styles.Item}
       onClick={props.onClick}
       data-aos="slide-up"
-      data-aos-duration={1000}
+      data-aos-duration={700}
       data-aos-delay={delay}
     >
       <div className={styles.Overlay}>

@@ -11,7 +11,7 @@ const Intro = React.forwardRef<any>((props: any, ref) => {
           Hi, I'm Nicolas
         </h3>
         <span data-aos="fade-up" data-aos-delay="1000">
-          I'm a front-end software engineer
+          I love to code and to be a Front-End Software Engineer
         </span>
       </div>
     </section>

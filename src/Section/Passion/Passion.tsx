@@ -20,8 +20,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
             className={styles.Item}
             data-aos="fade-down"
             data-aos-anchor-placement="top-center"
-            data-aos-delay="300"
-            data-aos-duration="1000"
+            data-aos-duration="600"
           >
             <Logo>
               <i className="fas fa-code fa-7x"></i>
@@ -38,8 +37,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
             className={styles.Item}
             data-aos="fade-down"
             data-aos-anchor-placement="top-center"
-            data-aos-delay="600"
-            data-aos-duration="1000"
+            data-aos-duration="600"
           >
             <Logo>
               <i className="fas fa-tools fa-7x"></i>
@@ -56,8 +54,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
             className={styles.Item}
             data-aos="fade-down"
             data-aos-anchor-placement="top-center"
-            data-aos-delay="900"
-            data-aos-duration="1000"
+            data-aos-duration="600"
           >
             <Logo>
               <i className="fas fa-search fa-7x"></i>

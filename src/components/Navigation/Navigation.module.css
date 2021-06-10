@@ -51,7 +51,15 @@
   height: 100%;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 750px) {
+  .Top {
+    padding: 0 20px;
+  }
+
+  .Scrolled {
+    padding: 0 20px;
+  }
+
   .DesktopOnly {
     display: none;
     height: 100%;
