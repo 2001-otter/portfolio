@@ -1,22 +1,15 @@
 .Container {
   display: flex;
-  /* height: 100vh; */
-  /* display: none; */
 }
 .Modal {
-  /* display: flex; 
-  flex-direction: column; 
-  overflow: hidden;  */
-
+  height: 90vh;
   position: fixed;
   z-index: 500;
   width: 60%;
 
-  --height: 42rem;
-  max-height: var(--height);
-  top: calc(50% - var(--height) / 2);
+  top: 5%;
 
-  left: calc(50% - 30%);
+  left: 20%;
 
   box-sizing: border-box;
   transition: all 0.3s ease-out;

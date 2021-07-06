@@ -1,6 +1,6 @@
 .Main {
   background-color: white;
-  max-height: 93vh;
+  height: 100%;
 
   display: flex; /* relevant part */
   flex-direction: column; /* relevant part */

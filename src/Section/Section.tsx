@@ -26,20 +26,22 @@ const Section = ({ changeSection }: any) => {
   });
   const [refContact, inViewContact] = useInView({
     /* Optional options */
-    rootMargin: "-200px 0px 0px 0px",
+    threshold: 0.9,
   });
 
   useEffect(() => {
-    if (inViewIntro) {
-      changeSection("intro");
-    } else if (inViewAbout) {
-      changeSection("about");
-    } else if (inViewPassion) {
-      changeSection("work");
-    } else if (inViewWork) {
-      changeSection("projects");
-    } else if (inViewContact) {
+    if (inViewContact) {
       changeSection("contact");
+    } else {
+      if (inViewIntro) {
+        changeSection("intro");
+      } else if (inViewAbout) {
+        changeSection("about");
+      } else if (inViewPassion) {
+        changeSection("work");
+      } else if (inViewWork) {
+        changeSection("projects");
+      }
     }
   }, [
     inViewIntro,

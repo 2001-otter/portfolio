@@ -39,11 +39,14 @@
 .Name {
   font-size: 20px;
   color: white;
+  height: 100%;
 }
 
 .Name a {
   color: white;
   text-decoration: none;
+  position: relative;
+  top: 25%;
 }
 
 .DesktopOnly {
@@ -58,10 +61,5 @@
 
   .Scrolled {
     padding: 0 20px;
-  }
-
-  .DesktopOnly {
-    display: none;
-    height: 100%;
   }
 }

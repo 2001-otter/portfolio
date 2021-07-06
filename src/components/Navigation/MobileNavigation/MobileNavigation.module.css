@@ -1,0 +1,19 @@
+.MobileNavigation {
+  width: 100%;
+}
+
+.Items {
+  padding: 0;
+}
+
+.Item {
+  width: 100%;
+  padding: 0;
+  /* list-style: none; */
+}
+
+@media (min-width: 750px) {
+  .MobileNavigation {
+    display: none;
+  }
+}
