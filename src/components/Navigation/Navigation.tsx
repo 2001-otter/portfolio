@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './Navigation.module.css';
-import NavigationItems from './NavigationItems/NavigationItems';
+import DesktopNavigation from './DesktopNavigation/DesktopNavigation';
 import MobileNavigation from './MobileNavigation/MobileNavigation';
 
 interface NavigationProps {
@@ -11,6 +11,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
   let listenerRef: any = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [view, setView] = useState(false);
 
   useEffect(() => {
     let listener = listenerRef.current;
@@ -31,16 +32,49 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
     };
   }, [isScrolled]);
 
+  function jsUcfirst(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  const navList = ['about', 'work', 'projects', 'contact'];
+  let counter = 0;
+  const nav = navList.map((navItem) => {
+    counter++;
+    return (
+      <li key={counter}>
+        <a
+          className={
+            navItem !== currentSection
+              ? styles.Item
+              : [styles.Item, styles.Active].join(' ')
+          }
+          href={'#' + navItem}
+          onClick={() => setView(false)}
+        >
+          {jsUcfirst(navItem)}
+        </a>
+      </li>
+    );
+  });
+
   return (
-    <header className={isScrolled ? styles.Scrolled : styles.Top}>
-      <div className={styles.Name} data-aos='fade-down'>
-        <a href='https://nicolas-ot.github.io/portfolio/'>Nicolas Theodarus</a>
+    <>
+      <div className={isScrolled ? styles.Scrolled : styles.Top}>
+        <nav style={{ width: '100%', height: '100%' }}>
+          <div className={styles.NavContainer}>
+            <MobileNavigation setView={setView} />
+            <DesktopNavigation currentSection={currentSection} />
+          </div>
+        </nav>
       </div>
-      <nav style={{ height: '100%' }}>
-        <MobileNavigation currentSection={currentSection} />
-        <NavigationItems currentSection={currentSection} />
-      </nav>
-    </header>
+      <div
+        className={
+          view ? styles.Dropdown : [styles.Dropdown, styles.Hidden].join(' ')
+        }
+      >
+        <ul className={styles.Items}>{nav}</ul>
+      </div>
+    </>
   );
 };
 

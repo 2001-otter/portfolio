@@ -1,51 +1,24 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
 import styles from './MobileNavigation.module.css';
 
 interface MobileNavigationProps {
-  currentSection: string;
+  setView: Dispatch<SetStateAction<boolean>>;
 }
-const MobileNavigation: React.FC<MobileNavigationProps> = ({
-  currentSection,
-}) => {
-  const [view, setView] = useState<boolean>(false);
-  console.log(view);
-  function jsUcfirst(string: string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-
-  const navList = ['about', 'work', 'projects', 'contact'];
-  let counter = 0;
-  const nav = navList.map((navItem) => {
-    counter++;
-    return (
-      <nav
-        key={counter}
-        className={
-          navItem !== currentSection
-            ? styles.Item
-            : [styles.Item, styles.Active].join(' ')
-        }
-      >
-        <a href={'#' + navItem}>{jsUcfirst(navItem)}</a>
-      </nav>
-    );
-  });
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ setView }) => {
   return (
     <div className={styles.MobileNavigation}>
-      <i
-        className='fas fa-bars'
-        onClick={() => {
-          setView((prevState) => !prevState);
-        }}
-      ></i>
-
-      {view && (
-        <div className={styles.Dropdown}>
-          <ul className={styles.Items}>{nav}</ul>
-        </div>
-      )}
+      <div className={styles.Name} data-aos='fade-down'>
+        <a href='https://nicolas-ot.github.io/portfolio/'>Nicolas Theodarus</a>
+      </div>
+      <div className={styles.ButtonContainer}>
+        <button
+          className={styles.BarButton}
+          onClick={() => setView((prevState) => !prevState)}
+        >
+          <i className='fas fa-bars fa-2x'></i>
+        </button>
+      </div>
     </div>
   );
 };

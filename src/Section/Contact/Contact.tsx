@@ -1,45 +1,48 @@
-import React from "react";
-import styles from "./Contact.module.css";
+import React, { useState } from 'react';
+import styles from './Contact.module.css';
 
-import igLogo from "../../assets/img/socmed_logo/ig_logo.png";
-import githubLogo from "../../assets/img/socmed_logo/github_logo.png";
-import triangle from "../../assets/img/triangle2.png";
+import igLogo from '../../assets/img/socmed_logo/ig_logo.png';
+import githubLogo from '../../assets/img/socmed_logo/github_logo.png';
+import triangle from '../../assets/img/triangle2.png';
 
-import Box from "./Box/Box";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import Box from './Box/Box';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-import emailjs from "emailjs-com";
+import emailjs from 'emailjs-com';
 
 const Contact = React.forwardRef<any>((props: any, ref) => {
+  const [loading, setLoading] = useState(false);
+  console.log(loading);
+
   function _calculateScrollbarWidth() {
     document.documentElement.style.setProperty(
-      "--scrollbar-width",
-      window.innerWidth - document.documentElement.clientWidth + "px"
+      '--scrollbar-width',
+      window.innerWidth - document.documentElement.clientWidth + 'px'
     );
   }
   // recalculate on resize
-  window.addEventListener("resize", _calculateScrollbarWidth, false);
+  window.addEventListener('resize', _calculateScrollbarWidth, false);
   // recalculate on dom load
   document.addEventListener(
-    "DOMContentLoaded",
+    'DOMContentLoaded',
     _calculateScrollbarWidth,
     false
   );
 
   // recalculate on load (assets loaded as well)
-  window.addEventListener("load", _calculateScrollbarWidth);
+  window.addEventListener('load', _calculateScrollbarWidth);
 
   const socmeds = [
     {
-      name: "instagram",
+      name: 'instagram',
       logo: igLogo,
-      link: "https://www.instagram.com/nicolas.ot/",
+      link: 'https://www.instagram.com/nicolas.ot/',
     },
     {
-      name: "github",
+      name: 'github',
       logo: githubLogo,
-      link: "https://github.com/nicolas-ot",
+      link: 'https://github.com/nicolas-ot',
     },
   ];
 
@@ -57,67 +60,84 @@ const Contact = React.forwardRef<any>((props: any, ref) => {
   var image = (
     <img
       src={triangle}
-      alt="triangle"
+      alt='triangle'
       style={{
-        width: "calc(100vw - var(--scrollbar-width))",
-        height: "4rem",
+        width: 'calc(100vw - var(--scrollbar-width))',
+        height: '4rem',
       }}
     />
   );
 
-  const onFormSubmit = (e: any) => {
+  const onFormSubmit = async (e: any) => {
     e.preventDefault();
 
-    const fields = ["name", "email", "message"];
+    const fields = ['name', 'email', 'message'];
 
     const email: any = {
-      name: "null",
-      email: "null",
-      message: "null",
+      name: 'null',
+      email: 'null',
+      message: 'null',
     };
 
     fields.forEach((field) => {
       email[field] = (document.getElementById(field) as HTMLInputElement).value;
 
-      (document.getElementById(field) as HTMLInputElement).value = "";
+      (document.getElementById(field) as HTMLInputElement).value = '';
     });
 
-    emailjs.send(
-      "gmail",
-      "template_mvwzdeh",
-      email,
-      "user_TlrDTDTr8V6ogaCbKcNiT"
-    );
+    try {
+      setLoading(true);
+      await emailjs.send(
+        'gmail',
+        'template_mvwzdeh',
+        email,
+        'user_TlrDTDTr8V6ogaCbKcNiT'
+      );
+      alert('Message was sent successfully');
+      setLoading(false);
+    } catch (err) {
+      setLoading(false);
+      if (err.status === 0) {
+        alert('Internet disconnected');
+      } else if (err.status === 412) {
+        alert(
+          'Sending message failed. Please send message to nicolastheodarus@gmail.com instead. Thank you!'
+        );
+      } else {
+        const errorMsg = 'Error ' + err.status;
+        alert(errorMsg);
+      }
+    }
   };
 
   return (
     <>
-      <section className={styles.Content} id="contact" ref={ref}>
+      <section className={styles.Content} id='contact' ref={ref}>
         {image}
-        <h1 data-aos="slide-right">Contact</h1>
+        <h1 data-aos='slide-right'>Contact</h1>
         <div
           className={styles.Form}
-          data-aos="slide-up"
-          data-aos-duration="400"
+          data-aos='slide-up'
+          data-aos-duration='400'
         >
           <Form onSubmit={onFormSubmit}>
-            <Form.Group controlId="name">
-              <Form.Control type="text" placeholder="Name" />
+            <Form.Group controlId='name'>
+              <Form.Control type='text' placeholder='Name' />
             </Form.Group>
-            <Form.Group controlId="email">
-              <Form.Control type="email" placeholder="Email" />
+            <Form.Group controlId='email'>
+              <Form.Control type='email' placeholder='Email' />
             </Form.Group>
-            <Form.Group controlId="message">
-              <Form.Control as="textarea" rows={3} placeholder="Your Message" />
+            <Form.Group controlId='message'>
+              <Form.Control as='textarea' rows={3} placeholder='Your Message' />
             </Form.Group>
-            <Button variant="light" type="submit">
+            <Button variant='light' type='submit'>
               Submit
             </Button>
           </Form>
         </div>
         <div className={styles.Arrow}>
-          <a href={"#about"} data-aos="slide-up" data-aos-duration="400">
-            <i className="fas fa-arrow-circle-up fa-3x"></i>
+          <a href={'#about'} data-aos='slide-up' data-aos-duration='400'>
+            <i className='fas fa-arrow-circle-up fa-3x'></i>
           </a>
         </div>
         <div className={styles.Socmed}>{socmedBoxs}</div>

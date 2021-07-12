@@ -1,3 +1,7 @@
+:root {
+  --navbarHeightSmall: 50px;
+}
+
 .Top {
   transition-timing-function: ease-in;
   transition: 0.8s;
@@ -8,9 +12,9 @@
   left: 0;
   background-color: transparent;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
   box-sizing: border-box;
   z-index: 90;
 }
@@ -27,26 +31,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
   box-sizing: border-box;
   z-index: 90;
 }
 
+.NavContainer {
+  height: 100%;
+}
+
 .Navigation nav {
   height: 100%;
-}
-
-.Name {
-  font-size: 20px;
-  color: white;
-  height: 100%;
-}
-
-.Name a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  top: 25%;
 }
 
 .DesktopOnly {
@@ -54,12 +48,66 @@
   height: 100%;
 }
 
+.Dropdown {
+  transition: ease 0.7s;
+  z-index: 80;
+  position: fixed;
+  /* top: calc(var(--navbarHeightSmall) - 1px); */
+  top: var(--navbarHeightSmall);
+  background-color: black;
+  width: 100vw;
+  color: white;
+  border-top: 1px solid white;
+}
+
+.Dropdown a {
+  text-decoration: none;
+  color: white;
+}
+
+.Hidden {
+  transform: translateY(-250px);
+}
+
+.Items {
+  padding-inline-start: 0 !important;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.Items li {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Items a {
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.Items a:hover,
+.Items a:active,
+.Items a.active {
+  color: #807b77;
+}
+
+@media (min-width: 750px) {
+  .Dropdown {
+    display: none;
+  }
+}
+
 @media (max-width: 750px) {
   .Top {
-    padding: 0 20px;
+    height: var(--navbarHeightSmall);
   }
 
   .Scrolled {
-    padding: 0 20px;
+    height: 50px;
+  }
+
+  .NavContainer {
+    background-color: var(--clr-primary);
   }
 }
