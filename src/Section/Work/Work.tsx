@@ -17,9 +17,15 @@ import burger5 from '../../assets/img/projects-screenshot/burger-order/5.png';
 import burger6 from '../../assets/img/projects-screenshot/burger-order/6.png';
 import dnd from '../../assets/img/projects-screenshot/dnd.png';
 
+import weatherApp from '../../assets/img/projects-screenshot/weather-app/3.png';
+import weather1 from '../../assets/img/projects-screenshot/weather-app/1.png';
+import weather2 from '../../assets/img/projects-screenshot/weather-app/2.png';
+
 import reactProfile from '../../assets/img/projects-screenshot/react_profile.png';
 
-type ProjectType = {
+import netflixClone from '../../assets/img/projects-screenshot/netflix_clone.png';
+
+interface ProjectType {
   title: string;
   desc: string;
   longerDesc: string;
@@ -28,7 +34,7 @@ type ProjectType = {
   fullTech?: string[];
   source: string;
   site?: string;
-};
+}
 
 const Passion = React.forwardRef<any>((props: any, ref) => {
   const projects: ProjectType[] = [
@@ -70,6 +76,17 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
       site: 'https://burger-builder-1efe7.firebaseapp.com/',
     },
     {
+      title: 'Weather App',
+      desc: 'A simple weather app.',
+
+      longerDesc: 'An app to know the weather in any city across the globe.',
+      pict: [weatherApp, weather1, weather2],
+      tech: 'React · Typescript',
+      fullTech: ['React', 'Sass', 'Typescript'],
+      source: 'https://github.com/nicolas-ot/weather-app',
+      site: 'https://nicolas-ot.github.io/weather-app/',
+    },
+    {
       title: 'Project Manager',
       desc: 'A project manager with drag-and-drop implementation.',
       longerDesc:
@@ -84,30 +101,29 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
       source: 'https://github.com/nicolas-ot/task-manager',
       site: 'https://nicolas-ot.github.io/task-manager/',
     },
-    // {
-    //   title: 'React Profile',
-    //   desc: 'My website portfolio',
-    //   longerDesc: '',
+    {
+      title: 'React Profile',
+      desc: 'My website portfolio',
+      longerDesc: '',
 
-    //   pict: [reactProfile],
-    //   tech: 'React',
-    //   fullTech: ['React', 'CSS', 'Bootstrap'],
-    //   source: 'https://github.com/nicolas-ot/portfolio',
-    // },
-    // {
-    //   title: "Netflix Clone",
-    //   desc: "A clone of Netflix",
-    //   longerDesc: "This is a netflix clone built mostly using php",
-    //   pict: [netflixClone],
-    //   tech: "PHP · HTML · JS · CSS · MySQL",
-    //   fullTech: ["Axios", "CSS", "Firebase", "Jest", "React", "Redux"],
-    //   source: "https://github.com/nicolas-ot/netflix-clone",
-    //   id: 4,
-    // },
+      pict: [reactProfile],
+      tech: 'React',
+      fullTech: ['React', 'CSS', 'Bootstrap'],
+      source: 'https://github.com/nicolas-ot/portfolio',
+    },
+    {
+      title: 'Netflix Clone',
+      desc: 'A clone of Netflix',
+      longerDesc: 'This is a netflix clone built mostly using php',
+      pict: [netflixClone],
+      tech: 'PHP · HTML · JS · CSS · MySQL',
+      fullTech: ['Axios', 'CSS', 'Firebase', 'Jest', 'React', 'Redux'],
+      source: 'https://github.com/nicolas-ot/netflix-clone',
+    },
   ];
 
   const [viewing, setViewing] = useState(false);
-  const [viewedProject, setViewedProject] = useState(null);
+  const [viewedProject, setViewedProject] = useState<ProjectType>();
 
   let projectView = null;
 
@@ -120,20 +136,14 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
     setViewing(false);
   };
 
-  if (viewedProject !== null) {
+  if (viewedProject) {
     projectView = (
       <ProjectView
-        // @ts-ignore: Object is possibly 'null'.
         title={viewedProject.title}
-        // @ts-ignore: Object is possibly 'null'.
         desc={viewedProject.longerDesc}
-        // @ts-ignore: Object is possibly 'null'.
         pict={viewedProject.pict}
-        // @ts-ignore: Object is possibly 'null'.
         source={viewedProject.source}
-        // @ts-ignore: Object is possibly 'null'.
         site={viewedProject?.site}
-        // @ts-ignore: Object is possibly 'null'.
         fullTech={viewedProject.fullTech}
         clicked={clickAwayHandler}
       ></ProjectView>
