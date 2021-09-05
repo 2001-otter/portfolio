@@ -33,8 +33,8 @@ const About = React.forwardRef<any>((props: any, ref) => {
               {/* <img alt="profile" src={image}></img> */}
             </div>
             <p>
-              I'm a first-year student at Technische Universität Berlin,
-              pursuing a degree in Computational Engineering Science.
+              I'm a first-year student at Technische Universität München,
+              pursuing a degree in Computer Science.
               <br />
               <br />
               Programming has been my passion ever since I was in High School.
@@ -47,15 +47,9 @@ const About = React.forwardRef<any>((props: any, ref) => {
               <br />
               Playing guitar, reading books, and jogging are my most favourite
               activities when I'm not in front of my computer.
-              {/* <br />
-              <br />
-              <a href="#contact">
-                If you think we should make something awesome together, let me
-                know!
-              </a> */}
               <br />
               <br />
-              Current location: Berlin, Germany
+              Current location: Munich, Germany
             </p>
           </div>
         </div>
