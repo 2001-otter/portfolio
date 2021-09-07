@@ -172,7 +172,7 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
         {projectView}
       </Modal>
       <div className={styles.Passion}>
-        <h2 data-aos='slide-left' data-aos-duration='700'>
+        <h2 data-aos='slide-right' data-aos-duration='700'>
           My projects
         </h2>
         <div className={styles.Items}>{projectsComponent}</div>

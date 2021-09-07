@@ -22,7 +22,7 @@ const About = React.forwardRef<any>((props: any, ref) => {
           <div
             className={styles.About}
             data-aos='fade'
-            data-aos-anchor-placement='top-center'
+            data-aos-anchor-placement='top-bottom'
             data-aos-duration='400'
           >
             <h2>About me</h2>
@@ -58,7 +58,7 @@ const About = React.forwardRef<any>((props: any, ref) => {
             {/* <i className="fas fa-cog fa-2x"></i> */}
             <div
               data-aos='fade'
-              data-aos-anchor-placement='top-center'
+              data-aos-anchor-placement='top-bottom'
               data-aos-duration='400'
             >
               <h2>Technologies I've been working with</h2>

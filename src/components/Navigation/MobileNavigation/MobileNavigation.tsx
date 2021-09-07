@@ -11,7 +11,11 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ setView }) => {
       <div className={styles.Name} data-aos='fade-down'>
         <a href='https://nicolas-ot.github.io/portfolio/'>Nicolas Theodarus</a>
       </div>
-      <div className={styles.ButtonContainer}>
+      <div
+        className={styles.ButtonContainer}
+        data-aos='fade-down'
+        data-aos-delay='200'
+      >
         <button
           className={styles.BarButton}
           onClick={() => setView((prevState) => !prevState)}

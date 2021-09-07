@@ -8,14 +8,6 @@
   --var-border-color: rgb(230, 230, 230);
 }
 
-.Content > div {
-}
-
-.Content > div {
-  /* border-style: solid;
-  border-color: #aaa; */
-}
-
 .Left {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -70,7 +62,7 @@
   background-size: 18em;
   background-position: 46% 43%; */
 
-  background-image: url(../../assets/img/1.JPG);
+  background-image: url(../../assets/img/1.jpg);
   background-size: 10em;
   background-position: 50% 35%;
 

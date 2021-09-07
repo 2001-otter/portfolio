@@ -3,16 +3,12 @@ import React from 'react';
 import styles from './Project.module.css';
 
 const Project = (props: any) => {
-  const delay = 0;
-  // console.log(props.key);
-
   return (
     <div
       className={styles.Item}
       onClick={props.onClick}
       data-aos='slide-up'
       data-aos-duration={700}
-      data-aos-delay={delay}
     >
       <div className={styles.Overlay}>
         <div className={styles.Search}>

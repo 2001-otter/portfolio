@@ -1,16 +1,16 @@
-import React from "react";
-import styles from "./Passion.module.css";
+import React from 'react';
+import styles from './Passion.module.css';
 
-import Logo from "./Logo/Logo";
+import Logo from './Logo/Logo';
 
 const Passion = React.forwardRef<any>((props: any, ref) => {
   return (
     <section
       className={styles.Content}
-      id="work"
+      id='work'
       ref={ref}
-      data-aos="slide-right"
-      data-aos-duration="700"
+      data-aos='slide-right'
+      data-aos-duration='700'
     >
       {/* <Backdrop show></Backdrop> */}
       <div className={styles.Passion}>
@@ -18,12 +18,12 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
         <div className={styles.Items}>
           <div
             className={styles.Item}
-            data-aos="fade-down"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="600"
+            data-aos='fade-down'
+            data-aos-anchor-placement='top-bottom'
+            data-aos-duration='600'
           >
             <Logo>
-              <i className="fas fa-code fa-7x"></i>
+              <i className='fas fa-code fa-7x'></i>
             </Logo>
             <h3>Front End Development</h3>
             <p>
@@ -35,12 +35,12 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
           </div>
           <div
             className={styles.Item}
-            data-aos="fade-down"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="600"
+            data-aos='fade-down'
+            data-aos-anchor-placement='top-bottom'
+            data-aos-duration='600'
           >
             <Logo>
-              <i className="fas fa-tools fa-7x"></i>
+              <i className='fas fa-tools fa-7x'></i>
             </Logo>
             <h3>Product Development</h3>
             <p>
@@ -52,12 +52,12 @@ const Passion = React.forwardRef<any>((props: any, ref) => {
           </div>
           <div
             className={styles.Item}
-            data-aos="fade-down"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="600"
+            data-aos='fade-down'
+            data-aos-anchor-placement='top-bottom'
+            data-aos-duration='600'
           >
             <Logo>
-              <i className="fas fa-search fa-7x"></i>
+              <i className='fas fa-search fa-7x'></i>
             </Logo>
             <h3>Performance & SEO</h3>
             <p>

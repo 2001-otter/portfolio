@@ -136,7 +136,7 @@ const Contact = React.forwardRef<any>((props: any, ref) => {
           </Form>
         </div>
         <div className={styles.Arrow}>
-          <a href={'#about'} data-aos='slide-up' data-aos-duration='400'>
+          <a href={'#about'}>
             <i className='fas fa-arrow-circle-up fa-3x'></i>
           </a>
         </div>
